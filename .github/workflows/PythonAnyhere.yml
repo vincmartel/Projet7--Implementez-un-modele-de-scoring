@@ -25,4 +25,4 @@ jobs:
       - name: Deploy to PythonAnywhere
         run: |
           # Replace 'yourusername' and 'mysite' with your actual PythonAnywhere username and site name
-          ssh vincmartel@ssh.pythonanywhere.com "cd /home/yourusername/vincmartel && git pull origin main"
+          ssh vincmartel@ssh.pythonanywhere.com "cd /home/vincmartel/vincmartel && git pull origin main"
