@@ -1,0 +1,27 @@
+name: Deploy to PythonAnywhere
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+
+      - name: Install dependencies
+        #run: pip install -r requirements.txt
+        run: pip install flask
+      - name: Deploy to PythonAnywhere
+        run: |
+          # Replace 'yourusername' and 'mysite' with your actual PythonAnywhere username and site name
+          ssh vincmartel@ssh.pythonanywhere.com "cd /home/yourusername/vincmartel && git pull origin main"
