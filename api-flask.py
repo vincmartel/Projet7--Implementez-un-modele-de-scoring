@@ -69,4 +69,4 @@ def prediction():
 
 # Si le script est exécuté directement, l’application Flask est lancée en mode débogage sur le port 8000    
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=True, port=5000)

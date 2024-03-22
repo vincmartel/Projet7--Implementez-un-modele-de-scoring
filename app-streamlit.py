@@ -15,7 +15,7 @@ SK_ID_CURR = st.selectbox("Identifiant du prêt", prets_test)
 # Bouton pour effectuer la prédiction
 if st.button("Résultat"):
     # Appel à l'API Flask
-    api_url = "http://127.0.0.1:8000/prediction"
+    api_url = "http://127.0.0.1:5000/prediction"
     payload = {"Identifiant du prêt": SK_ID_CURR}
     
     try:
