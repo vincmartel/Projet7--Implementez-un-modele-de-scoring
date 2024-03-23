@@ -73,7 +73,8 @@ else:
 #streamlit run app-streamlit.py
 #python -m streamlit run app-streamlit.py
 #subprocess.Popen(["streamlit", "run", "app-streamlit.py"])
-subprocess.run(["python", "-m", "streamlit", "run", "app-streamlit.py"])
+#subprocess.run(["python", "-m", "streamlit", "run", "app-streamlit.py"])
+subprocess.run(["python", "-m", "streamlit", "run", "app-streamlit.py", "--server.port", "8000"])
 print("L'application Streamlit est en cours de démarrage...")
 
 # Attendez quelques secondes pour que l'application soit prête
