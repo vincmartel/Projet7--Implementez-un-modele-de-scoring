@@ -52,7 +52,7 @@ env["PORT"] = "5000"
 
 # Lancez l'API Flask
 #api_process = subprocess.Popen(["python", f"{scripts_directory}/api-flask.py"], env=env)
-api_process = subprocess.Popen(["python", f"{scripts_directory}/api-flask.py"], env=env)
+api_process = subprocess.Popen(["python", f"{scripts_directory}/app.py"], env=env)
 print("L'API Flask est en cours de démarrage...")
 
 # Attendez quelques secondes pour que l'API soit prête
