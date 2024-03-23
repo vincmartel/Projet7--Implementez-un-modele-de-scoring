@@ -1,28 +1,28 @@
 name: Deploy to PythonAnywhere
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+#on:
+#  push:
+#    branches: [ "master" ]
+#  pull_request:
+#    branches: [ "master" ]
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+#jobs:
+#  deploy:
+#    runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+ #   steps:
+ #     - name: Checkout code
+  #      uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.11.8
+   #   - name: Set up Python
+    #    uses: actions/setup-python@v2
+     #   with:
+      #    python-version: 3.11.8
 
-      - name: Install dependencies
+     # - name: Install dependencies
         #run: pip install -r requirements.txt
-        run: pip install flask
-      - name: Deploy to PythonAnywhere
-        run: |
+    #    run: pip install flask
+     # - name: Deploy to PythonAnywhere
+     #   run: |
           # Replace 'yourusername' and 'mysite' with your actual PythonAnywhere username and site name
-          ssh vincmartel@ssh.pythonanywhere.com "cd /home/vincmartel/vincmartel && git pull origin main"
+     #     ssh vincmartel@ssh.pythonanywhere.com "cd /home/vincmartel/vincmartel && git pull origin main"
