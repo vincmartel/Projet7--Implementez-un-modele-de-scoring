@@ -9,7 +9,7 @@ st.title("Décision d'attribution de crédit")
 st.image('logo.jpg')
 
 # Liste déroulante - sélection d'un identifiant de prêt dans la liste de test
-prets_test = [100002, 100003, 100004, 100006, 100007, 100008, 100009, 100010, 100011, 100012]
+prets_test = [12345678,100002, 100003, 100004, 100006, 100007, 100008, 100009, 100010, 100011, 100012]
 SK_ID_CURR = st.selectbox("Identifiant du prêt", prets_test)
 
 # Bouton pour effectuer la prédiction
