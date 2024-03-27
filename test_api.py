@@ -1,7 +1,6 @@
 import json
 import pytest
-#from app import app  # Replace with the actual name of your Flask app
-from ..app import app
+from app import app
 
 @pytest.fixture
 def client():
@@ -12,7 +11,7 @@ def client():
 def test_prediction_response(client):
     # Test qui vérifie si l'API retourne les paramètres 'pred' et 'decision'
     mock_data = {
-        'Identifiant du prêt': 100002  # Replace with a valid loan ID
+        'Identifiant du prêt': 100002
     }
 
     # Send a POST request to the /prediction endpoint
@@ -28,7 +27,7 @@ def test_prediction_response(client):
 def test_prediction_pred_decision(client):
     # Test qui vérifie si l'API retourne une valeur de 'pred' comprise entre 0 et 1, et une valeur de décision égale à 'prêt accordé' ou 'prêt refusé'  
     mock_data = {
-        'Identifiant du prêt': 100002  # Replace with a valid loan ID
+        'Identifiant du prêt': 100003
     }
     
     response = client.post('/prediction', json=mock_data)
