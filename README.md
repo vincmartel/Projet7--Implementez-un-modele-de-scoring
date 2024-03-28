@@ -2,7 +2,7 @@
 
 **API Flask pour la décision d'attribution de prêt**
 
-Cette API Flask utilise un modèle de machine learning entrainé (LGBM Classifier) pour prédire la probabilité qu’un client rembourse son crédit, puis classifie la demande en crédit accordé ou refusé.
+Cette API Flask utilise un modèle de machine learning entrainé (LGBM Classifier) pour prédire la probabilité de faillite d'un client de façon automatique, puis classifie la demande en crédit accordé ou refusé.
 
 **Contenu du Dépôt**
 
@@ -13,19 +13,19 @@ Cette API Flask utilise un modèle de machine learning entrainé (LGBM Classifie
 - scaler.pkl: Le scaler entraîné. Il est utilisé pour normaliser les caractéristiques d’entrée avant de faire des prédictions.
 - lgbm_clf.pkl: Le modèle LGBM Classifier entraîné. Ce fichier est utilisé pour effectuer les prédictions.
 
-- test_api.py: Les tests Pytest exécutés pendant le build.
-- data_sample.csv: Un échantillon de demande de prêt pour tester l’API. 
+- test_api.py: Les tests Pytest unitaires exécutés pendant le build.
+- data_sample.csv: Un échantillon de demandes de prêt pour tester l’API. 
 - app-streamlit.py: l’interface Streamlit de test de l'API pour simuler un scoring et une décision d'attribution de prêt 
 
 **Utilisation**
 
-1)  Clonez ce dépôt sur votre machine locale.
-2)  Installez les dépendances en exécutant pip install -r requirements.txt.
-3)  Exécutez l’API Flask avec python app.py.
+1)  Clonez ce dépôt sur votre machine locale
+2)  Installez les dépendances en exécutant pip install -r requirements.txt
+3)  Exécutez l’API Flask avec python app.py
 4)  Utilisez l’interface app-streamlit.py pour simuler un scoring client
 
 **Déploiement vers Azure**
 
-Nous utilisons GitHub Actions pour automatiser le processus de build et déploiement. Si les tests sont OK, l’API est déployée vers Azure.
+Nous utilisons GitHub Actions pour automatiser le processus de build et déploiement. Si les tests sont OK, l’API est déployée dans Azure.
 
 URL de l'API: **https://scoringcredit.azurewebsites.net**
