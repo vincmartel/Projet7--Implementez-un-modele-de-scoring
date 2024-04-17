@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 #import plotly.express as px
 
-# Chargement des données (echantillons de 10000 prets)
+# Chargement des données (echantillons de 4000 prets)
 sample = pd.read_csv('data_after_feat_eng.csv') #307507 rows × 802 columns
-sample=sample[:10000] #10000 premières lignes
+sample=sample[:4000] #4000 premières lignes
 
 # Initialisation de predict_button_state
 if "predict_button_state" not in st.session_state:
