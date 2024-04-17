@@ -38,7 +38,6 @@ def predict(SK_ID_CURR):
             st.error("Erreur lors de l'appel à l'API")
     except requests.exceptions.RequestException as e:
             st.error(f"Erreur : {e}")
-    #return None  # Retourne None en cas d'erreur
 
 @st.cache_data
 def build_df(result):
