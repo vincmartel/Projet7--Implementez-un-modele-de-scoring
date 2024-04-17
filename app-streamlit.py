@@ -25,8 +25,8 @@ SK_ID_CURR = st.sidebar.selectbox("Sélectionner un prêt", prets_test)
 @st.cache_data
 def predict(SK_ID_CURR):
     attrib1="test"
-    #api_url = "http://127.0.0.1:8000/prediction"
-    api_url = "https://scoringcredit.azurewebsites.net/prediction"
+    api_url = "http://127.0.0.1:5000/prediction"
+    #api_url = "https://scoringcredit.azurewebsites.net/prediction"
     payload = {"Identifiant du prêt": SK_ID_CURR}
     try:
         # Envoi de la requête à l'API et récupération de la réponse
