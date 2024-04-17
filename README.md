@@ -15,7 +15,7 @@ Cette API Flask utilise un modèle de machine learning entrainé (LGBM Classifie
 
 - test_api.py: Les tests Pytest unitaires exécutés pendant le build.
 - data_sample.csv: Un échantillon de demandes de prêt pour tester l’API. 
-- app-streamlit.py: l’interface Streamlit de test de l'API pour simuler un scoring et une décision d'attribution de prêt 
+- app-streamlit.py: l’interface Streamlit de test de l'API pour simuler un scoring et une décision d'attribution de prêt.
 
 **Utilisation**
 
