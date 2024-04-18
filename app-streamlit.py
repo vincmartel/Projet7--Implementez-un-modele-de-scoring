@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 
 # Chargement des données (echantillons de 4000 prets)
 sample = pd.read_csv('data_after_feat_eng.csv') #307507 rows × 802 columns
-sample=sample[:900] #900 premières lignes
+sample=sample[:500] #500 premières lignes
 
 # Initialisation de predict_button_state
 if "predict_button_state" not in st.session_state:
@@ -54,7 +54,11 @@ def build_df(result):
 if SK_ID_CURR:
     st.sidebar.header("Profil du client")
     age=int(sample.loc[sample['SK_ID_CURR']==SK_ID_CURR,'DAYS_BIRTH']/365*(-1))
+    enfants=int(sample.loc[sample['SK_ID_CURR']==SK_ID_CURR,'CNT_CHILDREN'])
+    sexe=['Homme' if int(sample.loc[sample['SK_ID_CURR']==SK_ID_CURR,'CODE_GENDER'])==0 else 'Femme']
+    st.sidebar.write(sexe[0])
     st.sidebar.write('Âge', age, 'ans')
+    st.sidebar.write(enfants, 'enfants')
 
 # 1 - RISQUE DE NON REMBOURSEMENT
 #st.title("Risque de non-remboursement")
@@ -124,7 +128,7 @@ def display_scatter(selected_feature1, selected_feature2, SK_ID_CURR):
         yaxis_title=selected_feature2,
         showlegend=False,  # Masquez la légende
         width=800,  # Largeur de la figure
-        height=800  # Hauteur de la figure
+        height=600  # Hauteur de la figure
 )
 # Affichage du graphique dans Streamlit
     st.plotly_chart(fig2)
@@ -190,7 +194,7 @@ if SK_ID_CURR and st.session_state.predict_button_state:
     #legend='Classe 1'
     
         ))
-
+        fig.update_yaxes(title_text="Nombre de clients")
 # Mise en forme du graphique
         fig.update_layout(
         title='Distribution de ' + selected_feature,
@@ -204,7 +208,7 @@ if SK_ID_CURR and st.session_state.predict_button_state:
         xaxis1=dict(domain=[0, 0.45]),
         xaxis2=dict(domain=[0.50, 1]),  # Positionnement de l'axe x2
         width=800,  # Largeur de la figure
-        height=800  # Hauteur de la figure
+        height=600  # Hauteur de la figure
         )   
 
 # Affichage du graphique
