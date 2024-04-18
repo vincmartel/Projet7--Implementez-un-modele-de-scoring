@@ -1,5 +1,3 @@
-#from turtle import color
-#import click
 import streamlit as st
 import requests
 import pandas as pd
