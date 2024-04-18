@@ -116,7 +116,7 @@ def display_scatter(selected_feature1, selected_feature2, SK_ID_CURR):
     y=sample[selected_feature2],
     mode='markers',
     marker=dict(size=[20 if val == SK_ID_CURR else 10 for val in sample['SK_ID_CURR']],
-                color=['#470aa5' if val == SK_ID_CURR else '#fedaf2' for val in sample['SK_ID_CURR']]),   
+                color=['yellow' if val == SK_ID_CURR else 'blue' for val in sample['SK_ID_CURR']]),   
     text=sample.index  # Utilisez les indices comme étiquettes pour chaque point
 ))
 # Personnalisation du graphique
