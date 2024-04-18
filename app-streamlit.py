@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 
 # Chargement des données (echantillons de 4000 prets)
 sample = pd.read_csv('data_after_feat_eng.csv') #307507 rows × 802 columns
-sample=sample[:4000] #4000 premières lignes
+sample=sample[:900] #900 premières lignes
 
 # Initialisation de predict_button_state
 if "predict_button_state" not in st.session_state:
@@ -203,7 +203,7 @@ if SK_ID_CURR and st.session_state.predict_button_state:
         bargroupgap=0.1,  # Espacement entre les barres du même groupe
         xaxis1=dict(domain=[0, 0.45]),
         xaxis2=dict(domain=[0.50, 1]),  # Positionnement de l'axe x2
-        width=1200,  # Largeur de la figure
+        width=800,  # Largeur de la figure
         height=800  # Hauteur de la figure
         )   
 
