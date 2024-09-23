@@ -1,0 +1,3 @@
+Lien vers l'API de prédiction: https://scoringcredit.azurewebsites.net
+Version gratuite Azure avec crédit de test limité: l'API est stoppée pour maitriser les coûts.
+Merci de me contacter si besoin de démarrer l'API: vincmartel@gmail.com
